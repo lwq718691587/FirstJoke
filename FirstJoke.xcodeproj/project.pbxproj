@@ -11,6 +11,7 @@
 		FC017A1F1E4AF666001C4821 /* FJFreeJokeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC017A1E1E4AF666001C4821 /* FJFreeJokeTableViewCell.m */; };
 		FC017A231E4AFC9B001C4821 /* FJChargeJokeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC017A221E4AFC9B001C4821 /* FJChargeJokeModel.m */; };
 		FC017A271E4AFD8F001C4821 /* FJChargeJokeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC017A261E4AFD8F001C4821 /* FJChargeJokeTableViewCell.m */; };
+		FC017A2B1E4B1963001C4821 /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FC017A2A1E4B1963001C4821 /* timg.jpeg */; };
 		FC33BC371E4ADDAF001C798F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC33BC361E4ADDAF001C798F /* main.m */; };
 		FC33BC3A1E4ADDAF001C798F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC33BC391E4ADDAF001C798F /* AppDelegate.m */; };
 		FC33BC401E4ADDAF001C798F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC33BC3E1E4ADDAF001C798F /* Main.storyboard */; };
@@ -69,6 +70,7 @@
 		FC017A221E4AFC9B001C4821 /* FJChargeJokeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJChargeJokeModel.m; sourceTree = "<group>"; };
 		FC017A251E4AFD8F001C4821 /* FJChargeJokeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJChargeJokeTableViewCell.h; sourceTree = "<group>"; };
 		FC017A261E4AFD8F001C4821 /* FJChargeJokeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJChargeJokeTableViewCell.m; sourceTree = "<group>"; };
+		FC017A2A1E4B1963001C4821 /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
 		FC33BC321E4ADDAF001C798F /* FirstJoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstJoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC33BC361E4ADDAF001C798F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC33BC381E4ADDAF001C798F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 		FC017A241E4AFCA4001C4821 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FC017A2A1E4B1963001C4821 /* timg.jpeg */,
 				FC017A251E4AFD8F001C4821 /* FJChargeJokeTableViewCell.h */,
 				FC017A261E4AFD8F001C4821 /* FJChargeJokeTableViewCell.m */,
 			);
@@ -572,6 +575,7 @@
 			files = (
 				FC33BC451E4ADDAF001C798F /* LaunchScreen.storyboard in Resources */,
 				FC33BC421E4ADDAF001C798F /* Assets.xcassets in Resources */,
+				FC017A2B1E4B1963001C4821 /* timg.jpeg in Resources */,
 				FC33BC401E4ADDAF001C798F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

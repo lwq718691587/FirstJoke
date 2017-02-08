@@ -49,7 +49,8 @@
     _model = model;
     self.custitleLable.text = model.title;
     self.timeLable.text = model.time;
-    [self.cusImageView sd_setImageWithURL:[NSURL URLWithString:model.imageUrl] placeholderImage:[UIImage imageNamed:@""]];
+
+    [self.cusImageView sd_setImageWithURL:[NSURL URLWithString:model.imageUrl] placeholderImage:[UIImage imageNamed:@"timg.jpeg"] options:SDWebImageProgressiveDownload];
 }
 
 - (void)tapFun:(UITapGestureRecognizer *)tap{

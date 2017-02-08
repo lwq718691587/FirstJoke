@@ -24,12 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    if (!ValueNSUserDefaults(chargeJokeTotalPageNumber)) {
-        SetNSUserDefaults([NSNumber numberWithInteger:1], chargeJokeTotalPageNumber);
-    }
-    
     self.pageNumber = 1;
-    self.title = [NSString stringWithFormat:@"精选(%ld)", [ValueNSUserDefaults(chargeJokeTotalPageNumber) integerValue]* 5];
     [self update:self.pageNumber];
     [self createTableView];
     
@@ -39,26 +34,10 @@
 }
 
 - (void)update:(NSInteger )pagenumber{
-    
 
-    NSInteger  totalPageNumber = [ValueNSUserDefaults(chargeJokeTotalPageNumber) integerValue];
-    if (self.pageNumber > totalPageNumber) {
-        [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
-        [SVProgressHUD setMinimumDismissTimeInterval:1];
-        [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
-        [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"您最多可看%ld条笑话，如需更多请购买！",totalPageNumber * 5]];
-        [self.chargeJokeTableView.mj_header endRefreshing];
-        [self.chargeJokeTableView.mj_footer endRefreshing];
-        self.pageNumber --;
-        return;
-    }
 
     [FJChargeJokeModel getjokeListOfPageNum:pagenumber Success:^(NSMutableArray *dataArr) {
-        if (pagenumber == 1) {
-            self.dataArr = dataArr;
-        }else{
-            [self.dataArr addObjectsFromArray:dataArr];
-        }
+        self.dataArr = dataArr;
         [self.chargeJokeTableView reloadData];
         [self.chargeJokeTableView.mj_header endRefreshing];
         [self.chargeJokeTableView.mj_footer endRefreshing];
@@ -74,23 +53,9 @@
     self.chargeJokeTableView.delegate = self;
     self.chargeJokeTableView.dataSource =self;
     self.chargeJokeTableView.backgroundColor=[UIColor clearColor];
+    
     self.chargeJokeTableView.rowHeight = SFhy(260);
     [self.view addSubview:self.chargeJokeTableView];
-    
-    MJRefreshNormalHeader* header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        self.pageNumber = 1;
-        [self update:self.pageNumber];
-    }];
-    [header setTitle:@"下拉开始刷新" forState:MJRefreshStateIdle];
-    [header setTitle:@"松开以进行刷新" forState:MJRefreshStatePulling];
-    [header setTitle:@"刷新中 ..." forState:MJRefreshStateRefreshing];
-    self.chargeJokeTableView.mj_header = header;
-    
-    self.chargeJokeTableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-        self.pageNumber++;
-        [self update:self.pageNumber];
-    }];
-    
 }
 
 //设置row的个数
@@ -103,10 +68,15 @@
     FJChargeJokeTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:PickViewCell];
     if (cell==nil) {
         cell = [[FJChargeJokeTableViewCell  alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:PickViewCell];
+        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     cell.delegate = self;
     cell.model = self.dataArr[indexPath.row];
     return cell;
+}
+
+- (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    return @"一元5条笑话，购买立即获得更多快乐";
 }
 
 -(void)tapFunDelegate:(UIImageView *)iv{
@@ -122,10 +92,7 @@
 }
 
 -(void)rightBarButtonItemFun{
-    NSInteger pageNumber = [ValueNSUserDefaults(chargeJokeTotalPageNumber) integerValue];
-    pageNumber ++;
-    SetNSUserDefaults([NSNumber numberWithInteger:pageNumber], chargeJokeTotalPageNumber);
-    self.title = [NSString stringWithFormat:@"精选(%ld)",pageNumber * 5];
+    [self update:++self.pageNumber];
 }
 
 @end
