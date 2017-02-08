@@ -33,11 +33,11 @@
 - (void)addViewController
 {
     
-    FJChargeJokeViewController * vc1 = [[FJChargeJokeViewController alloc]init];
+    FJFreeJokeViewController * vc1 = [[FJFreeJokeViewController alloc]init];
     vc1.title = @"免费";
     BaseNavigationViewController * nvc1 = [[BaseNavigationViewController alloc]initWithRootViewController:vc1];
     
-    FJFreeJokeViewController * vc2 = [[FJFreeJokeViewController alloc]init];
+    FJChargeJokeViewController * vc2 = [[FJChargeJokeViewController alloc]init];
     vc2.title = @"精选";
     BaseNavigationViewController * nvc2 = [[BaseNavigationViewController alloc]initWithRootViewController:vc2];
     self.viewControllers = @[nvc1,nvc2];
