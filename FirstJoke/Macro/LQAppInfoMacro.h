@@ -10,8 +10,18 @@
 #ifndef LQAppInfoMacro_h
 #define LQAppInfoMacro_h
 
+#define product1_ID @"com.LCTechnology.FirstJoke1"
+//沙盒测试环境验证
+#ifdef DEBUG
+    #define SANDBOX @"https://sandbox.itunes.apple.com/verifyReceipt"
+#else
+    #define SANDBOX @"https://buy.itunes.apple.com/verifyReceipt"
+#endif
+
 //appID
 #define AppStoreID                      @"100709015711" //线上的appID
+
+#define AppFontOfSize(s)                [UIFont fontWithName:AppFontName size:SFhy(s)]
 //app字体
 #define AppFontName                     [NSString stringWithFormat:@"%@",[[UIFont systemFontOfSize:1] fontName]]
 //app一级标题字体大小

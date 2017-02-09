@@ -11,6 +11,7 @@
 #import "LQMacro.h"
 #import "FJChargeJokeViewController.h"
 #import "FJFreeJokeViewController.h"
+#import "FJAboutViewController.h"
 @interface BaseTabBarViewController ()
 @property(nonatomic,strong)NSMutableArray * btnArr;
 @property(nonatomic,strong)UIImageView * bearbarImageView;
@@ -35,23 +36,35 @@
     
     FJFreeJokeViewController * vc1 = [[FJFreeJokeViewController alloc]init];
     vc1.title = @"免费";
+    vc1.type = @"免费";
     BaseNavigationViewController * nvc1 = [[BaseNavigationViewController alloc]initWithRootViewController:vc1];
     
     FJChargeJokeViewController * vc2 = [[FJChargeJokeViewController alloc]init];
     vc2.title = @"精选";
     BaseNavigationViewController * nvc2 = [[BaseNavigationViewController alloc]initWithRootViewController:vc2];
-    self.viewControllers = @[nvc1,nvc2];
+    
+    FJFreeJokeViewController * vc3 = [[FJFreeJokeViewController alloc]init];
+    vc3.title = @"随便看看";
+    vc3.type = @"随便看看";
+    BaseNavigationViewController * nvc3 = [[BaseNavigationViewController alloc]initWithRootViewController:vc3];
+    
+    FJAboutViewController * vc4 = [[FJAboutViewController alloc]init];
+    vc4.title = @"关于我们";
+    BaseNavigationViewController * nvc4 = [[BaseNavigationViewController alloc]initWithRootViewController:vc4];
+    
+    self.viewControllers = @[nvc1,nvc2,nvc3,nvc4];
     
 }
 
 - (void)systemTabbar{
     
-    NSArray * itemImageArr = @[@"leftPage",@"homePage",@"rightPage"];
+    self.tabBar.tintColor = AppColor;
     
-    for (int i = 0; i < 2; i++) {
+    NSArray * itemImageArr = @[@"Free",@"精选",@"suibian",@"AboutUS"];
+    
+    for (int i = 0; i < itemImageArr.count; i++) {
         UITabBarItem * item = self.tabBar.items[i];
         item.image = [UIImage imageNamed:itemImageArr[i]];
-        item.imageInsets = UIEdgeInsetsMake(7, 0, -7, 0);
     }
     self.selectedIndex = 1;
 }

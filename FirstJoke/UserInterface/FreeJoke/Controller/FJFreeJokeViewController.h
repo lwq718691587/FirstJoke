@@ -10,4 +10,6 @@
 
 @interface FJFreeJokeViewController : BaseViewController
 
+@property (strong, nonatomic) NSString *type;
+
 @end

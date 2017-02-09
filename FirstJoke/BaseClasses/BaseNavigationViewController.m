@@ -17,10 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    self.navigationBar.barTintColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"导航栏渐变_02"]];
-//    self.navigationBar.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"导航栏渐变_02"]];
-//    self.navigationBar.tintColor = AppColor;
-//    self.navigationBar.titleTextAttributes =@{NSForegroundColorAttributeName:HexColor(@"303a48"),NSFontAttributeName:[UIFont fontWithName:AppFontName size:NavigationTitleFontSize]};
+    self.navigationBar.barTintColor = AppColor;
+
+    self.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationBar.titleTextAttributes =@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont fontWithName:AppFontName size:18]};
 //    //去掉导航栏下的黑线
 //    [self.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
 //    self.navigationBar.shadowImage = [[UIImage alloc] init];

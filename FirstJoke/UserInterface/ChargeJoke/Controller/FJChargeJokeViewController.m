@@ -13,14 +13,7 @@
 
 #import <StoreKit/StoreKit.h>
 
-#define chargeJokeTotalPageNumber @"chargeJokeTotalPageNumber"
 
-#define product1_ID @"com.LCTechnology.FirstJoke1"
-
-//沙盒测试环境验证
-#define SANDBOX @"https://sandbox.itunes.apple.com/verifyReceipt"
-//正式环境验证
-#define AppStore @"https://buy.itunes.apple.com/verifyReceipt"
 
 @interface FJChargeJokeViewController ()<UITableViewDelegate,UITableViewDataSource,FJChargeJokeTableViewCellDelegate,SKPaymentTransactionObserver,SKProductsRequestDelegate>
 @property (strong, nonatomic) UITableView *chargeJokeTableView;
@@ -79,6 +72,7 @@
     if (cell==nil) {
         cell = [[FJChargeJokeTableViewCell  alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:PickViewCell];
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+        cell.backgroundColor = [UIColor clearColor];
     }
     cell.delegate = self;
     cell.model = self.dataArr[indexPath.row];

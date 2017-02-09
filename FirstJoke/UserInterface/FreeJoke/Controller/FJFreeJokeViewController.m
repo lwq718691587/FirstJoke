@@ -28,19 +28,33 @@
 
 - (void)update:(NSInteger )pagenumber{
   
-    [FJFreeJokeModel getjokeListOfPageNum:pagenumber Success:^(NSMutableArray *dataArr) {
-        if (pagenumber == 1) {
-            self.dataArr = dataArr;
-        }else{
-            [self.dataArr addObjectsFromArray:dataArr];
-        }
-       
-        [self.freeJokeTableView reloadData];
-        [self.freeJokeTableView.mj_header endRefreshing];
-        [self.freeJokeTableView.mj_footer endRefreshing];
-    } failure:^{
-        
-    }];
+    if ([self.type isEqualToString:@"免费"]) {
+        [FJFreeJokeModel getjokeListOfPageNum:pagenumber Success:^(NSMutableArray *dataArr) {
+            if (pagenumber == 1) {
+                self.dataArr = dataArr;
+            }else{
+                [self.dataArr addObjectsFromArray:dataArr];
+            }
+            [self.freeJokeTableView reloadData];
+            [self.freeJokeTableView.mj_header endRefreshing];
+            [self.freeJokeTableView.mj_footer endRefreshing];
+        } failure:^{
+            
+        }];
+    }else{
+        [FJFreeJokeModel getjokeListOfPageNum:pagenumber+15 Success:^(NSMutableArray *dataArr) {
+            if (pagenumber == 1) {
+                self.dataArr = dataArr;
+            }else{
+                [self.dataArr addObjectsFromArray:dataArr];
+            }
+            [self.freeJokeTableView reloadData];
+            [self.freeJokeTableView.mj_header endRefreshing];
+            [self.freeJokeTableView.mj_footer endRefreshing];
+        } failure:^{
+            
+        }];
+    }
 }
 
 //创建tableView
@@ -78,6 +92,7 @@
     FJFreeJokeTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:PickViewCell];
     if (cell==nil) {
         cell = [[FJFreeJokeTableViewCell  alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:PickViewCell];
+        cell.backgroundColor = [UIColor clearColor];
     }
     cell.model = self.dataArr[indexPath.row];
     return cell;

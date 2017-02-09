@@ -41,6 +41,8 @@
 		FC74842C1E4AE08600D82CB4 /* FJFreeJokeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC74842B1E4AE08600D82CB4 /* FJFreeJokeViewController.m */; };
 		FC74842F1E4AE0A500D82CB4 /* FJChargeJokeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC74842E1E4AE0A500D82CB4 /* FJChargeJokeViewController.m */; };
 		FCB464CA1E4AEC1A0081F6FA /* FJFreeJokeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB464C91E4AEC1A0081F6FA /* FJFreeJokeModel.m */; };
+		FCE64DBB1E4C44D700D7C5BE /* FJAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE64DB91E4C44D700D7C5BE /* FJAboutViewController.m */; };
+		FCE64DBF1E4C488200D7C5BE /* OCAboutUSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE64DBE1E4C488200D7C5BE /* OCAboutUSTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +138,10 @@
 		FC74842E1E4AE0A500D82CB4 /* FJChargeJokeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJChargeJokeViewController.m; sourceTree = "<group>"; };
 		FCB464C81E4AEC1A0081F6FA /* FJFreeJokeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJFreeJokeModel.h; sourceTree = "<group>"; };
 		FCB464C91E4AEC1A0081F6FA /* FJFreeJokeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJFreeJokeModel.m; sourceTree = "<group>"; };
+		FCE64DB81E4C44D700D7C5BE /* FJAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJAboutViewController.h; sourceTree = "<group>"; };
+		FCE64DB91E4C44D700D7C5BE /* FJAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJAboutViewController.m; sourceTree = "<group>"; };
+		FCE64DBD1E4C488200D7C5BE /* OCAboutUSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCAboutUSTableViewCell.h; sourceTree = "<group>"; };
+		FCE64DBE1E4C488200D7C5BE /* OCAboutUSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCAboutUSTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +284,7 @@
 		FC7481371E4ADF1D00D82CB4 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
+				FCE64DB41E4C3C1B00D7C5BE /* AboutUs */,
 				FC7484201E4ADFF700D82CB4 /* ChargeJoke */,
 				FC7484211E4ADFF700D82CB4 /* FreeJoke */,
 			);
@@ -461,6 +468,17 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		FCE64DB41E4C3C1B00D7C5BE /* AboutUs */ = {
+			isa = PBXGroup;
+			children = (
+				FCE64DBD1E4C488200D7C5BE /* OCAboutUSTableViewCell.h */,
+				FCE64DBE1E4C488200D7C5BE /* OCAboutUSTableViewCell.m */,
+				FCE64DB81E4C44D700D7C5BE /* FJAboutViewController.h */,
+				FCE64DB91E4C44D700D7C5BE /* FJAboutViewController.m */,
+			);
+			path = AboutUs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -531,7 +549,7 @@
 				TargetAttributes = {
 					FC33BC311E4ADDAD001C798F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 9XN34D62H7;
+						DevelopmentTeam = C9VG28535S;
 						ProvisioningStyle = Manual;
 					};
 					FC33BC4A1E4ADDAF001C798F = {
@@ -667,8 +685,10 @@
 				FC74834A1E4ADF6800D82CB4 /* UIView+LwqCGRect.m in Sources */,
 				FC7483501E4ADF6800D82CB4 /* NSFileManager+ Addition.m in Sources */,
 				FC74842C1E4AE08600D82CB4 /* FJFreeJokeViewController.m in Sources */,
+				FCE64DBF1E4C488200D7C5BE /* OCAboutUSTableViewCell.m in Sources */,
 				FC74814E1E4ADF5600D82CB4 /* BaseViewController.m in Sources */,
 				FC74814D1E4ADF5600D82CB4 /* BaseView.m in Sources */,
+				FCE64DBB1E4C44D700D7C5BE /* FJAboutViewController.m in Sources */,
 				FC7483511E4ADF6800D82CB4 /* NSString+LQAddition.m in Sources */,
 				FC74842F1E4AE0A500D82CB4 /* FJChargeJokeViewController.m in Sources */,
 				FC74841B1E4ADF6900D82CB4 /* LQFullscreenImageViewController.m in Sources */,
@@ -826,14 +846,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 9XN34D62H7;
+				DEVELOPMENT_TEAM = C9VG28535S;
 				INFOPLIST_FILE = FirstJoke/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LCTechnology.FirstJoke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7245412e-2805-4225-a035-1e72307ceaaf";
-				PROVISIONING_PROFILE_SPECIFIER = FirstJokeDeveloper;
+				PROVISIONING_PROFILE = "502d92a5-8147-405d-b118-07f954a2cf61";
+				PROVISIONING_PROFILE_SPECIFIER = OraCleenDeveloperWildcard;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -851,6 +872,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "44d81000-2d62-4ead-ae18-33ee790f68fd";
 				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: com.LCTechnology.FirstJoke";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

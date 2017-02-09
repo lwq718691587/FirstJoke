@@ -17,7 +17,7 @@
 #pragma mark - view lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = HexColor(@"f7fcfd");
     if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]){
         [self setEdgesForExtendedLayout:UIRectEdgeNone];
     }
