@@ -549,7 +549,7 @@
 				TargetAttributes = {
 					FC33BC311E4ADDAD001C798F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = C9VG28535S;
+						DevelopmentTeam = 9XN34D62H7;
 						ProvisioningStyle = Manual;
 					};
 					FC33BC4A1E4ADDAF001C798F = {
@@ -846,14 +846,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = C9VG28535S;
+				DEVELOPMENT_TEAM = 9XN34D62H7;
 				INFOPLIST_FILE = FirstJoke/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LCTechnology.FirstJoke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "502d92a5-8147-405d-b118-07f954a2cf61";
-				PROVISIONING_PROFILE_SPECIFIER = OraCleenDeveloperWildcard;
+				PROVISIONING_PROFILE = "7245412e-2805-4225-a035-1e72307ceaaf";
+				PROVISIONING_PROFILE_SPECIFIER = FirstJokeDeveloper;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
