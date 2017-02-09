@@ -46,7 +46,7 @@
     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
     // app版本
     NSString *app_Version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
-    verLabel.text = [NSString stringWithFormat:@"OraCleen Ver %@",app_Version];
+    verLabel.text = [NSString stringWithFormat:@"笑话一条街 Ver %@",app_Version];
     [self.view addSubview:verLabel];
     
 
