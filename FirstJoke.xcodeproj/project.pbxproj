@@ -829,7 +829,7 @@
 				INFOPLIST_FILE = FirstJoke/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.FirstJoke.FirstJoke;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LCTechnology.FirstJoke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "502d92a5-8147-405d-b118-07f954a2cf61";
 				PROVISIONING_PROFILE_SPECIFIER = OraCleenDeveloperWildcard;
@@ -845,7 +845,7 @@
 				INFOPLIST_FILE = FirstJoke/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.FirstJoke.FirstJoke;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LCTechnology.FirstJoke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "502d92a5-8147-405d-b118-07f954a2cf61";
 				PROVISIONING_PROFILE_SPECIFIER = OraCleenDeveloperWildcard;
