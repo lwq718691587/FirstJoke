@@ -12,11 +12,11 @@
 
 #define product1_ID @"com.LCTechnology.FirstJoke1"
 //沙盒测试环境验证
-#ifdef DEBUG
-    #define SANDBOX @"https://sandbox.itunes.apple.com/verifyReceipt"
-#else
+//#ifdef DEBUG
+//    #define SANDBOX @"https://sandbox.itunes.apple.com/verifyReceipt"
+//#else
     #define SANDBOX @"https://buy.itunes.apple.com/verifyReceipt"
-#endif
+//#endif
 
 //appID
 #define AppStoreID                      @"100709015711" //线上的appID

@@ -22,7 +22,7 @@
         [self addSubview:self.cusTitleLabel];
         
         self.cusSubTitleLabel = [[UILabel alloc]initWithFrame:CGRectMake(SFwx(16), 0, SFwx(200), SFhy(17))];
-        self.cusSubTitleLabel.right = self.width + 20;
+        self.cusSubTitleLabel.right = ScreenWidth - 40;
         self.cusSubTitleLabel.font = AppFontOfSize(16);
         self.cusSubTitleLabel.textColor = HexColor(@"2e3d4b");
         self.cusSubTitleLabel.centerY = cellHeight/2;
