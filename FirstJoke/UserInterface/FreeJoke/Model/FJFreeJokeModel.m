@@ -15,10 +15,8 @@
 
     [LQNetworkingRequest GET:[NSString stringWithFormat:@"http://api.avatardata.cn/Joke/NewstJoke?key=ce030797ef7d4620a1ec2f4a0becb013&page=%ld&rows=10",pageNum] parameters:nil needCache:YES success:^(id operation, id responseObject) {
         NSMutableArray * dataArr = [[NSMutableArray alloc]init];
-        
         NSString * str = [responseObject objectForKey:@"error_code"];
         int code = [str intValue];
-        
         NSArray * arr = responseObject[@"result"];
         
         if (str && code == 0 && arr.count != 0 ) {
@@ -39,7 +37,6 @@
                 model.time = perDic[@"updatetime"];
                 [dataArr addObject:model];
             }
-
         }
         success(dataArr);
     } failure:^(id operation, NSError *error) {
