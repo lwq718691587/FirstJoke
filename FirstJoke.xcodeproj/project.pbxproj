@@ -41,6 +41,18 @@
 		FC74842C1E4AE08600D82CB4 /* FJFreeJokeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC74842B1E4AE08600D82CB4 /* FJFreeJokeViewController.m */; };
 		FC74842F1E4AE0A500D82CB4 /* FJChargeJokeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC74842E1E4AE0A500D82CB4 /* FJChargeJokeViewController.m */; };
 		FCB464CA1E4AEC1A0081F6FA /* FJFreeJokeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB464C91E4AEC1A0081F6FA /* FJFreeJokeModel.m */; };
+		FCC9327B1E5C670D00227DDC /* FJCharge.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCC9327A1E5C670D00227DDC /* FJCharge.plist */; };
+		FCC932821E5C67F800227DDC /* charge5.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC9327D1E5C67F800227DDC /* charge5.png */; };
+		FCC932831E5C67F800227DDC /* charge4.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC9327E1E5C67F800227DDC /* charge4.png */; };
+		FCC932841E5C67F800227DDC /* charge3.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC9327F1E5C67F800227DDC /* charge3.png */; };
+		FCC932851E5C67F800227DDC /* charge2.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC932801E5C67F800227DDC /* charge2.png */; };
+		FCC932861E5C67F800227DDC /* charge1.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC932811E5C67F800227DDC /* charge1.png */; };
+		FCC932881E5C6A3B00227DDC /* FJFree.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCC932871E5C6A3B00227DDC /* FJFree.plist */; };
+		FCC9328D1E5C6E0B00227DDC /* charge6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC932891E5C6E0B00227DDC /* charge6.jpg */; };
+		FCC9328E1E5C6E0B00227DDC /* charge7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC9328A1E5C6E0B00227DDC /* charge7.jpg */; };
+		FCC9328F1E5C6E0B00227DDC /* charge8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC9328B1E5C6E0B00227DDC /* charge8.jpg */; };
+		FCC932901E5C6E0B00227DDC /* charge9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC9328C1E5C6E0B00227DDC /* charge9.jpg */; };
+		FCC932921E5C6E0F00227DDC /* charge10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC932911E5C6E0F00227DDC /* charge10.jpg */; };
 		FCE64DBB1E4C44D700D7C5BE /* FJAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE64DB91E4C44D700D7C5BE /* FJAboutViewController.m */; };
 		FCE64DBF1E4C488200D7C5BE /* OCAboutUSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE64DBE1E4C488200D7C5BE /* OCAboutUSTableViewCell.m */; };
 /* End PBXBuildFile section */
@@ -138,6 +150,18 @@
 		FC74842E1E4AE0A500D82CB4 /* FJChargeJokeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJChargeJokeViewController.m; sourceTree = "<group>"; };
 		FCB464C81E4AEC1A0081F6FA /* FJFreeJokeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJFreeJokeModel.h; sourceTree = "<group>"; };
 		FCB464C91E4AEC1A0081F6FA /* FJFreeJokeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJFreeJokeModel.m; sourceTree = "<group>"; };
+		FCC9327A1E5C670D00227DDC /* FJCharge.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FJCharge.plist; path = ../FJCharge.plist; sourceTree = "<group>"; };
+		FCC9327D1E5C67F800227DDC /* charge5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = charge5.png; sourceTree = "<group>"; };
+		FCC9327E1E5C67F800227DDC /* charge4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = charge4.png; sourceTree = "<group>"; };
+		FCC9327F1E5C67F800227DDC /* charge3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = charge3.png; sourceTree = "<group>"; };
+		FCC932801E5C67F800227DDC /* charge2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = charge2.png; sourceTree = "<group>"; };
+		FCC932811E5C67F800227DDC /* charge1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = charge1.png; sourceTree = "<group>"; };
+		FCC932871E5C6A3B00227DDC /* FJFree.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FJFree.plist; sourceTree = "<group>"; };
+		FCC932891E5C6E0B00227DDC /* charge6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = charge6.jpg; sourceTree = "<group>"; };
+		FCC9328A1E5C6E0B00227DDC /* charge7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = charge7.jpg; sourceTree = "<group>"; };
+		FCC9328B1E5C6E0B00227DDC /* charge8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = charge8.jpg; sourceTree = "<group>"; };
+		FCC9328C1E5C6E0B00227DDC /* charge9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = charge9.jpg; sourceTree = "<group>"; };
+		FCC932911E5C6E0F00227DDC /* charge10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = charge10.jpg; sourceTree = "<group>"; };
 		FCE64DB81E4C44D700D7C5BE /* FJAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJAboutViewController.h; sourceTree = "<group>"; };
 		FCE64DB91E4C44D700D7C5BE /* FJAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJAboutViewController.m; sourceTree = "<group>"; };
 		FCE64DBD1E4C488200D7C5BE /* OCAboutUSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCAboutUSTableViewCell.h; sourceTree = "<group>"; };
@@ -199,6 +223,7 @@
 		FC017A201E4AFC6F001C4821 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FCC9327C1E5C67F300227DDC /* DateSoures */,
 				FC017A211E4AFC9B001C4821 /* FJChargeJokeModel.h */,
 				FC017A221E4AFC9B001C4821 /* FJChargeJokeModel.m */,
 			);
@@ -462,10 +487,29 @@
 		FCB464C71E4AEBFF0081F6FA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FCC932871E5C6A3B00227DDC /* FJFree.plist */,
 				FCB464C81E4AEC1A0081F6FA /* FJFreeJokeModel.h */,
 				FCB464C91E4AEC1A0081F6FA /* FJFreeJokeModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FCC9327C1E5C67F300227DDC /* DateSoures */ = {
+			isa = PBXGroup;
+			children = (
+				FCC9327A1E5C670D00227DDC /* FJCharge.plist */,
+				FCC932911E5C6E0F00227DDC /* charge10.jpg */,
+				FCC932891E5C6E0B00227DDC /* charge6.jpg */,
+				FCC9328A1E5C6E0B00227DDC /* charge7.jpg */,
+				FCC9328B1E5C6E0B00227DDC /* charge8.jpg */,
+				FCC9328C1E5C6E0B00227DDC /* charge9.jpg */,
+				FCC9327D1E5C67F800227DDC /* charge5.png */,
+				FCC9327E1E5C67F800227DDC /* charge4.png */,
+				FCC9327F1E5C67F800227DDC /* charge3.png */,
+				FCC932801E5C67F800227DDC /* charge2.png */,
+				FCC932811E5C67F800227DDC /* charge1.png */,
+			);
+			path = DateSoures;
 			sourceTree = "<group>";
 		};
 		FCE64DB41E4C3C1B00D7C5BE /* AboutUs */ = {
@@ -591,10 +635,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC932851E5C67F800227DDC /* charge2.png in Resources */,
+				FCC932861E5C67F800227DDC /* charge1.png in Resources */,
+				FCC932881E5C6A3B00227DDC /* FJFree.plist in Resources */,
+				FCC932901E5C6E0B00227DDC /* charge9.jpg in Resources */,
+				FCC9328E1E5C6E0B00227DDC /* charge7.jpg in Resources */,
+				FCC9328F1E5C6E0B00227DDC /* charge8.jpg in Resources */,
+				FCC932921E5C6E0F00227DDC /* charge10.jpg in Resources */,
 				FC33BC451E4ADDAF001C798F /* LaunchScreen.storyboard in Resources */,
 				FC33BC421E4ADDAF001C798F /* Assets.xcassets in Resources */,
 				FC017A2B1E4B1963001C4821 /* timg.jpeg in Resources */,
+				FCC9328D1E5C6E0B00227DDC /* charge6.jpg in Resources */,
+				FCC932841E5C67F800227DDC /* charge3.png in Resources */,
+				FCC932821E5C67F800227DDC /* charge5.png in Resources */,
+				FCC9327B1E5C670D00227DDC /* FJCharge.plist in Resources */,
 				FC33BC401E4ADDAF001C798F /* Main.storyboard in Resources */,
+				FCC932831E5C67F800227DDC /* charge4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

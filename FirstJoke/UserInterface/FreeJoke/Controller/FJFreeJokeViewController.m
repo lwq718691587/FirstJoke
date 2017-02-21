@@ -40,6 +40,8 @@
             [self.freeJokeTableView.mj_footer endRefreshing];
         } failure:^{
             
+            [self.freeJokeTableView.mj_header endRefreshing];
+            [self.freeJokeTableView.mj_footer endRefreshing];
         }];
     }else{
         [FJFreeJokeModel getjokeListOfPageNum:pagenumber+15 Success:^(NSMutableArray *dataArr) {

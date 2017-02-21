@@ -45,7 +45,8 @@
         [self.chargeJokeTableView.mj_header endRefreshing];
         [self.chargeJokeTableView.mj_footer endRefreshing];
     } failure:^{
-        
+        [self.chargeJokeTableView.mj_header endRefreshing];
+        [self.chargeJokeTableView.mj_footer endRefreshing];
     }];
 }
 
@@ -96,12 +97,14 @@
 }
 
 -(void)rightBarButtonItemFun{
+
     NSString *product = product1_ID;
     if([SKPaymentQueue canMakePayments]){
         [self requestProductData:product];
     }else{
         NSLog(@"不允许程序内付费");
     }
+
 }
 
 //请求商品
