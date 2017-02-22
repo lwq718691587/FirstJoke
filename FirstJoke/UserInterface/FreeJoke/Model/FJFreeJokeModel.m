@@ -4,8 +4,6 @@
 //
 //  Created by 刘伟强 on 2017/2/8.
 //  Copyright © 2017年 刘伟强. All rights reserved.
-// http://avatardata.cn/Docs/Api/4b49361c-e858-4a69-845e-0c8c3b24cb5f
-// 账号 ： 17600802935 密码 lwq521xf1314
 
 #import "FJFreeJokeModel.h"
 
@@ -13,13 +11,13 @@
 
 + (void)getjokeListOfPageNum:(NSUInteger)pageNum Success:(void(^)(NSMutableArray *dataArr))success failure:(void(^)())failure{
 
-    [LQNetworkingRequest GET:[NSString stringWithFormat:@"http://api.avatardata.cn/Joke/NewstJoke?key=ce030797ef7d4620a1ec2f4a0becb013&page=%ld&rows=10",pageNum] parameters:nil needCache:YES success:^(id operation, id responseObject) {
+    [LQNetworkingRequest GET:[NSString stringWithFormat:@"http://japi.juhe.cn/joke/content/text.from?key=%@&page=%ld&pagesize=10",juheAppKey,pageNum] parameters:nil needCache:YES success:^(id operation, id responseObject) {
         NSMutableArray * dataArr = [[NSMutableArray alloc]init];
         NSString * str = [responseObject objectForKey:@"error_code"];
         int code = [str intValue];
-        NSArray * arr = responseObject[@"result"];
+        NSArray * arr = responseObject[@"result"][@"data"];
         
-        if (str && code == 0 && arr.count != 0 ) {
+        if (str && code == 0 && arr.count != 0 && [arr isKindOfClass:[NSArray class]]) {
        
             for (NSDictionary * perDic in arr) {
                 FJFreeJokeModel *model = [[FJFreeJokeModel alloc]init];

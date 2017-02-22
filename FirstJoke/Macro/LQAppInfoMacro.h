@@ -10,7 +10,15 @@
 #ifndef LQAppInfoMacro_h
 #define LQAppInfoMacro_h
 
+
+//聚合网址 ： https://www.juhe.cn/myData 账号：17600802935 密码：lwq521xf1314
+#define juheAppKey  @"1b276db92deba10fa14b00035ad110a7"
+
+//uMeng 账号 ： lwqdeveloper@163.com 密码 ： lwq521xf1314@dev
+#define uMengAppkey @"58acef47bbea836e10000926"
+
 #define product1_ID @"com.LCTechnology.FirstJoke1"
+
 //沙盒测试环境验证
 //#ifdef DEBUG
 //    #define SANDBOX @"https://sandbox.itunes.apple.com/verifyReceipt"

@@ -12,7 +12,7 @@
 #import "LQFullscreenImageViewController.h"
 
 #import <StoreKit/StoreKit.h>
-
+#import <UMMobClick/MobClick.h>
 
 
 @interface FJChargeJokeViewController ()<UITableViewDelegate,UITableViewDataSource,FJChargeJokeTableViewCellDelegate,SKPaymentTransactionObserver,SKProductsRequestDelegate>
@@ -97,7 +97,6 @@
 }
 
 -(void)rightBarButtonItemFun{
-
     NSString *product = product1_ID;
     if([SKPaymentQueue canMakePayments]){
         [self requestProductData:product];
@@ -189,7 +188,7 @@
     if([dic[@"status"] intValue]==0){
         NSLog(@"购买成功！");
         [self update:++self.pageNumber];
-        //在此处对购买记录进行存储，可以存储到开发商的服务器端
+        [MobClick event:@"FirstJoke_Purchase_oneRMB"];
     }else{
         NSLog(@"购买失败，未通过验证！");
     }

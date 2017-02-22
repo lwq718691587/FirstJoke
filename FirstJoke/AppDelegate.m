@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "BaseTabBarViewController.h"
 #import "LQNetworkingRequest.h"
+#import <UMMobClick/MobClick.h>
 @interface AppDelegate ()
 
 @end
@@ -25,7 +26,18 @@
     [self.window makeKeyAndVisible];
     [LQNetworkingRequest openNSURLCache];
     [self checkNetworkStatus];
-
+    
+//配置友盟
+    UMConfigInstance.appKey = uMengAppkey;
+#ifdef DEBUG
+    UMConfigInstance.channelId = @"DEBUG";
+#else
+    UMConfigInstance.channelId = @"App Store";
+#endif
+    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    [MobClick setAppVersion:version];
+    [MobClick startWithConfigure:UMConfigInstance];
+    
     return YES;
 }
 

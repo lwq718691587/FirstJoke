@@ -12,17 +12,14 @@
 
 + (void)getjokeListOfPageNum:(NSUInteger)pageNum Success:(void(^)(NSMutableArray *dataArr))success failure:(void(^)())failure{
     
-    [LQNetworkingRequest GET:[NSString stringWithFormat:@"http://api.avatardata.cn/Joke/NewstImg?key=1effeeda1958456080de98962e51ecd8&page=%ld&rows=5",pageNum] parameters:nil needCache:YES success:^(id operation, id responseObject) {
+    [LQNetworkingRequest GET:[NSString stringWithFormat:@"http://japi.juhe.cn/joke/img/text.from?key=%@&page=%ld&pagesize=5",juheAppKey,pageNum] parameters:nil needCache:YES success:^(id operation, id responseObject) {
         NSMutableArray * dataArr = [[NSMutableArray alloc]init];
         
         
         NSString * str = [responseObject objectForKey:@"error_code"];
         int code = [str intValue];
-        
-        NSArray * arr = responseObject[@"result"];
-        
-        if (str && code == 0 && arr.count != 0 ) {
-            
+        NSArray * arr = responseObject[@"result"][@"data"];
+        if (str && code == 0 && arr.count != 0  && [arr isKindOfClass:[NSArray class]]) {
             for (NSDictionary * perDic in arr) {
                 FJChargeJokeModel *model = [[FJChargeJokeModel alloc]init];
                 model.title = perDic[@"content"];
@@ -31,7 +28,6 @@
                 [dataArr addObject:model];
             }
         }else{
-            
             NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"FJCharge" ofType:@"plist"];
             NSMutableArray *data = [[NSMutableArray alloc] initWithContentsOfFile:plistPath];
             
