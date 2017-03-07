@@ -901,15 +901,15 @@
 			baseConfigurationReference = E03D10D9C43FF4C74454CEB2 /* Pods-FirstJoke.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 9XN34D62H7;
 				INFOPLIST_FILE = FirstJoke/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LCTechnology.FirstJoke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "44d81000-2d62-4ead-ae18-33ee790f68fd";
-				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: com.LCTechnology.FirstJoke";
+				PROVISIONING_PROFILE = "7245412e-2805-4225-a035-1e72307ceaaf";
+				PROVISIONING_PROFILE_SPECIFIER = FirstJokeDeveloper;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
