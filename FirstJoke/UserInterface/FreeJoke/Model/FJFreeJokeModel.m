@@ -13,17 +13,27 @@
 
     [LQNetworkingRequest GET:[NSString stringWithFormat:@"http://japi.juhe.cn/joke/content/text.from?key=%@&page=%ld&pagesize=10",juheAppKey,pageNum] parameters:nil needCache:YES success:^(id operation, id responseObject) {
         NSMutableArray * dataArr = [[NSMutableArray alloc]init];
+        
+        
         NSString * str = [responseObject objectForKey:@"error_code"];
         int code = [str intValue];
-        NSArray * arr = responseObject[@"result"][@"data"];
+        id result = [responseObject objectForKey:@"result"];
+        NSArray *resultData = nil;
+        if ([result isKindOfClass:[NSDictionary class]]) {
+            id arr = [result objectForKey:@"data"];
+            if ([arr isKindOfClass:[NSArray class]]) {
+                resultData = arr;
+            }
+        }
         
-        if (str && code == 0 && arr.count != 0 && [arr isKindOfClass:[NSArray class]]) {
-       
-            for (NSDictionary * perDic in arr) {
+        if (str && code == 0 && result && resultData &&  resultData.count != 0 ) {
+            
+            for (NSDictionary * perDic in resultData) {
                 FJFreeJokeModel *model = [[FJFreeJokeModel alloc]init];
-                model.content = perDic[@"content"];
+               
+                model.content = [perDic[@"content"] isKindOfClass:[NSString class]] ? perDic[@"content"] : @"数据出错";
                 model.content = [model.content stringByReplacingOccurrencesOfString:@"&nbsp;" withString:@""];
-                model.time = perDic[@"updatetime"];
+                model.time = [perDic[@"updatetime"] isKindOfClass:[NSString class]] ? perDic[@"updatetime"] : @"数据出错";
                 [dataArr addObject:model];
             }
         }else{

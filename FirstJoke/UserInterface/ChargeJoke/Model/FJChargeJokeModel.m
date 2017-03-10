@@ -18,13 +18,21 @@
         
         NSString * str = [responseObject objectForKey:@"error_code"];
         int code = [str intValue];
-        NSArray * arr = responseObject[@"result"][@"data"];
-        if (str && code == 0 && arr.count != 0  && [arr isKindOfClass:[NSArray class]]) {
-            for (NSDictionary * perDic in arr) {
+        id result = [responseObject objectForKey:@"result"];
+        NSArray *resultData = nil;
+        if ([result isKindOfClass:[NSDictionary class]]) {
+            id arr = [result objectForKey:@"data"];
+            if ([arr isKindOfClass:[NSArray class]]) {
+                resultData = arr;
+            }
+        }
+        
+        if (str && code == 0 && result && resultData && resultData.count != 0 ) {
+            for (NSDictionary * perDic in resultData) {
                 FJChargeJokeModel *model = [[FJChargeJokeModel alloc]init];
-                model.title = perDic[@"content"];
-                model.imageUrl = perDic[@"url"];
-                model.time = perDic[@"updatetime"];
+                model.title = [perDic[@"content"] isKindOfClass:[NSString class]] ? perDic[@"content"] : @"数据出错";
+                model.imageUrl = [perDic[@"url"] isKindOfClass:[NSString class]] ? perDic[@"url"] : @"charge2.png";
+                model.time = [perDic[@"updatetime"] isKindOfClass:[NSString class]] ? perDic[@"updatetime"] : @"数据出错";
                 [dataArr addObject:model];
             }
         }else{
